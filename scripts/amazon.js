@@ -5,7 +5,7 @@ products.forEach((product) => {
         <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
-              src="${product.image}">
+              src="${product.image}" alt="">
           </div>
 
           <div class="product-name limit-text-to-2-lines">
@@ -14,7 +14,7 @@ products.forEach((product) => {
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.stars * 10}.png">
+              src="images/ratings/rating-${product.rating.stars * 10}.png" alt="">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
@@ -42,7 +42,7 @@ products.forEach((product) => {
           <div class="product-spacer"></div>
 
           <div class="added-to-cart">
-            <img src="images/icons/checkmark.png">
+            <img src="images/icons/checkmark.png" alt="">
             Added
           </div>
 
