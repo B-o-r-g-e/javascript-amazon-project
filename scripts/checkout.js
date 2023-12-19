@@ -92,7 +92,8 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
 
         const priceString = deliveryOption.priceCents === 0
             ? 'FREE'
-            : `$${formatCurrency(deliveryOption.priceCents)} - `;
+            : `$${formatCurrency(deliveryOption.priceCents)} - `
+        ;
 
         const isChecked = deliveryOption.id === cartItem.deliveryOptionId
 
