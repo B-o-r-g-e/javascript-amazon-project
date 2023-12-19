@@ -3,6 +3,7 @@ import {products, getProduct} from "../../data/products.js";
 import {formatCurrency} from "../utils/money.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption} from "../../data/deliveryOption.js";
+import {renderPaymentSummary} from "./paymentSummary.js";
 
 export function renderOrderSummary() {
 
@@ -121,6 +122,8 @@ export function renderOrderSummary() {
                 `.js-cart-item-container-${productId}
         `)
             container.remove()
+
+            renderPaymentSummary()
         })
     })
 
@@ -130,6 +133,7 @@ export function renderOrderSummary() {
                     const {productId, deliveryOptionId} = element.dataset
                     updateDeliveryOption(productId, deliveryOptionId)
                     renderOrderSummary()
+                    renderPaymentSummary()
                 })
             }
         )
